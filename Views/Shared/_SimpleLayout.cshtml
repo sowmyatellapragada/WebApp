@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <link href="/lib/twitter-bootstrap/css/bootstrap.min.css"
+          rel="stylesheet" />
+    @*<script asp-src-include="lib/jquery/**/*.js"></script>
+        <script asp-src-include="lib/jquery**/*.min.js"></script>*@
+    @*<script asp-src-include="lib/jquery**/*slim.min.js"></script>*@
+    @*<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+                asp-fallback-src="/lib/jquery/jquery.min.js"
+                asp-fallback-test="window.jQuery">
+        </script>*@
+    @*<link asp-href-include="/lib/twitter-bootstrap/css/*.min.css"
+          asp-href-exclude="**/*-reboot*,**/*-grid*" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitterbootstrap/4.3.1/css/bootstrap.min.css"
+          asp-fallback-href="/lib/twitter-bootstrap/css/bootstrap.min.css"
+          asp-fallback-test-class="btn"
+          asp-fallback-test-property="display"
+          asp-fallback-test-value="inline-block"
+          rel="stylesheet" />*@
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+    <div class="m-2">
+        @*<h6 class="bg-primary text-white m-2 p-2">
+            Uncached timestamp: @DateTime.Now.ToLongTimeString()
+        </h6>*@
+        @*<cache expires-after="@TimeSpan.FromSeconds(15)">*@
+        @*<cache expires-sliding="@TimeSpan.FromSeconds(10)" vary-byroute="action">
+
+            <h6 class="bg-primary text-white m-2 p-2">
+                Cached timestamp: @DateTime.Now.ToLongTimeString()
+            </h6>
+        </cache>*@
+        @*<img src="/images/city.png" asp-append-version="true" class="m-2" />*@
+        @RenderBody()
+    </div>
+</body>
+</html>
